@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            // Имя задачи перед запуском отладки. Например, синхронизация исполняемых файлов.
+            "preLaunchTask": "rsync",
+            "type": "gdb",
+            // Вид запуска (старт исполняемого файла).
+            "request": "launch",
+            "name": "Run",
+            // Путь к gdb отладчику на удаленном устройстве(нужно поставить если нет).
+            "gdbpath": "/usr/bin/gdb",
+            // Имя исполняемого файла.
+            "target": "./ovision_ml_sdk_rv_example_tests",
+            // Путь к исходнику.
+            "cwd": "${workspaceFolder}/examples/cpp/tests/src/main.cpp",
+            "valuesFormatting": "parseText",
+            "ssh": {
+                // IP адрес удаленного устройства.
+                "host": "192.168.88.25",
+                // Путь к исполняемому файлу(имя бинарника возьмется из target).
+                "cwd": "/root/bin/",
+                // Ключ или пароль к удаленному устройству("password": "pass",).
+                "keyfile": "/home/user/.ssh/id_rsa",
+                "user": "root"
+            }
+        }
+    ]
+}

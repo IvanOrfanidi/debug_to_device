@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            // Имя задачи.
+            "label": "rsync",
+            // Исполняемый скрипт.
+            "command": "rsync -avzhHl ~/ovision-ml-sdk-rv/build/examples/cpp/bin root@192.168.88.25:/root",
+            // Тип скрипта.
+            "type": "shell"
+        }
+    ]
+}
